@@ -81,7 +81,7 @@ public function essai($cartevalue){
     public function insertscore($id_utilisateur){
         $id_utilisateur=htmlspecialchars(trim($id_utilisateur));
         $db = new PDO('mysql:host=localhost;dbname=memory', 'root', '');
-        $query = $db->prepare("INSERT INTO `score`( `id_utilisateur`,`score`) VALUES ('{$id_utilisateur}','{$this->score}')");
+        $query = $db->prepare( "INSERT INTO `score`( `id_utilisateur`,`score`) VALUES ('{$id_utilisateur}','{$this->score}')");
         $query->execute();
     }
 
