@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="../src/config/style/style.css">
 
 <?php
+
+include_once('../src/config/config.php');
+include_once('../src/component/header.php');
+
+
 require_once("../src/config/class/scoreclass.php");
-session_start();
 $game=$_SESSION['game'];
 
 $sign=0;

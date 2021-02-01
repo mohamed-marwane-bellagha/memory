@@ -1,5 +1,5 @@
 <?php 
-    require_once('C:/wamp64/www/memory/src/config/config.php');
+    require_once('../src/config/config.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
