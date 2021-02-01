@@ -33,7 +33,7 @@ if(isset($_POST['btn_login'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel='stylesheet' href='../src/config/style/header.css'>
+    <link rel='stylesheet' href='../src/config/style/style.css'>
 </head>
 <body>
     <form method="post">

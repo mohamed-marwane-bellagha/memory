@@ -29,7 +29,7 @@ if(isset($_POST['btn_register'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel='stylesheet' href='../src/config/style/header.css'>
+    <link rel='stylesheet' href='../src/config/style/style.css'>
 
 </head>
 <body>

@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include_once('src/config/config.php');
 ?>
 
@@ -9,7 +8,7 @@ include_once('src/config/config.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - <?php echo $_SESSION['user']->login; ?></title>
-    <link rel='stylesheet' href='src/config/style/header.css'>
+    <link rel='stylesheet' href='src/config/style/style.css'>
 </head>
 <body>
     <header>
@@ -46,7 +45,7 @@ include_once('src/config/config.php');
 </html>
 <?php
 require_once("src/config/class/scoreclass.php");
-session_start();
+
 echo "<form method='post' action='index.php'>
     <label  for='nb_paire'>Choix nombre de paire de carte a trouver</label>
     <input name='nb_paire' id='nb_paire' type='number'>

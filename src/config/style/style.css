@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.containerheader{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+}
+.paragrapheheader{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    transition: 0.8s;
+}
+.paragrapheheader:hover{
+    color: white;
+}
+.a{
+    text-decoration: none;
+}
+.btndeconnexion{
+    font-size: 22px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    transition: 1s;
+    border-radius: 10px;
+}
+.btndeconnexion:hover{
+    background-color: red;
+}

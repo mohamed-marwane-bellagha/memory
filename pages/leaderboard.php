@@ -1,5 +1,11 @@
+<link rel='stylesheet' href='../src/config/style/style.css'>
 
 <?php
+
+include_once('../src/config/config.php');
+include_once('../src/component/header.php');
+
+
 $db = new PDO('mysql:host=localhost;dbname=memory;charset=utf8', 'root', '');
 $query=$db->prepare("SELECT `score`, user.login FROM `score` INNER JOIN `user` ON user.id=score.id_utilisateur ORDER BY `score` DESC");
 $query->execute();
