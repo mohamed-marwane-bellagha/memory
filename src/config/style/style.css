@@ -34,3 +34,100 @@ body{
 .btndeconnexion:hover{
     background-color: red;
 }
+.cartecontainermemory{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
+    margin-top: 2%;
+}
+.cartememory{
+    background: url(./img/Dos-de-cartes-final-2016-tiers.jpg);
+    background-size: 100%;
+    margin-right: 5%;
+    height: 100%;
+    width:100%;
+    color:white;
+}
+.formcardmemory{
+    width:8%;
+    height: 28%;
+    margin-right: 2%;
+}
+.carte1:focus{
+    background: url("./img/Multipla.jpeg");
+    background-size: cover;
+}
+
+.carte2:focus{
+    background: url("./img/2056.jpg");
+    background-size: cover;
+}
+
+.carte3:focus{
+    background: url("./img/audi80.jpg");
+    background-size: cover;
+}
+
+.carte4:focus{
+    background: url("./img/ca4picasso.jpg");
+    background-size: cover;
+}
+
+.carte5:focus{
+    background: url("./img/civic.jpg");
+    background-size: cover;
+}
+
+.carte6:focus{
+    background: url("./img/clio.jpg");
+    background-size: cover;
+}
+
+.carte7:focus{
+    background: url("./img/e46.jpg");
+    background-size: cover;
+}
+
+.carte8:focus{
+    background: url("./img/espacef1.jpg");
+    background-size: cover;
+}
+
+.carte9:focus{
+    background: url("./img/fiat500.jpg");
+    background-size: cover;
+}
+
+.carte10:focus{
+    background: url("./img/golf.jpg");
+    background-size: cover;
+}
+
+.carte11:focus{
+    background: url("./img/punto.jpg");
+    background-size: cover;
+}
+
+.carte12:focus{
+    background: url("./img/twingo.jpg");
+    background-size: cover;
+}
+.scorecontainer{
+    font-size: xx-large;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: content-box;
+}
+.leaderboardlink{
+    text-align: center;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+}
+.leaderboardlink:visited{
+    text-decoration: none;
+
+}

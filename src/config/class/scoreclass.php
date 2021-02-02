@@ -5,7 +5,7 @@ class score {
     private $id_utilisateur;
     private $score=0;
     private $nb_paire;
-    private $booltry;
+    private $booltry =true;
     private $try1;
     private $try2;
     private $indexoftry1;
@@ -15,7 +15,6 @@ class score {
 //    public function __construct(){
 //        $this->db = new PDO('mysql:host=localhost;dbname=memory', 'root', '');
 //    }
-
     public function difficulty($nb_paire){
         $nb_paire=htmlspecialchars(trim($nb_paire));
         if($nb_paire>12 || $nb_paire<2){
@@ -26,7 +25,6 @@ class score {
         }
         return $verif;
     }
-
 public function essai($cartevalue){
         if($this->try1==null || $this->booltry==true){
             foreach ($cartevalue as $key=>$value){
@@ -42,7 +40,6 @@ public function essai($cartevalue){
                 $this->tentatives=$this->tentatives+1;
             }
             $this->booltry=true;
-
         }
 }
     public function addscore(){
@@ -84,10 +81,5 @@ public function essai($cartevalue){
         $query = $db->prepare( "INSERT INTO `score`( `id_utilisateur`,`score`) VALUES ('{$id_utilisateur}','{$this->score}')");
         $query->execute();
     }
-
-
-
 }
-
-
 ?>
