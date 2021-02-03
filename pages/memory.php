@@ -8,7 +8,16 @@ include_once('../src/config/config.php');
 include_once('../src/component/header.php');
 require_once("../src/config/class/scoreclass.php");
 $game=$_SESSION['game'];
+$user=$_SESSION['user'];
 
+echo "<div class='cartecontainer'>";
+for($i=0;$i<=$game->getnbpaire()*2 && isset($_SESSION['partie'][$i]) ;$i++){
+echo "<form method='post'>
+      <button class=' carte carte".$_SESSION['partie'][$i]."'type='submit' name='carte[$i]' value=".$_SESSION['partie'][$i].">".$_SESSION['partie'][$i]."</button>
+      </form>";
+}
+echo "</div>";
+echo "Score:".$game->getscore();
 if(isset($_POST['carte'])){
 $game->essai($_POST['carte']);
 
@@ -37,13 +46,14 @@ for($i=0;$i<=$game->getnbpaire()*2 && isset($_SESSION['partie'][$i]) ;$i++){
      </div>
       </form>";
 }
+
 echo "</div>";
 echo "<div class='scorecontainer'>Score:".$game->getscore()."</div>";
 if(count($_SESSION['partie'])==0  && isset($_POST['carte'])){
     echo "<div class='scorecontainer'><p>Fin du game</p>";
     echo "<a class='leaderboardlink' href='leaderboard.php'>Check si t'es dans le leaderboard</a>
           </div></main>";
-    $game->insertscore(42);
+    $game->insertscore($user->getId());
 }
 }else{
     header("Location:../index.php");

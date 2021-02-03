@@ -34,17 +34,24 @@ if(isset($_POST['btn_login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel='stylesheet' href='../src/config/style/style.css'>
+    <link rel='stylesheet' href='../src/config/style/bootstrap.css'>
+    <link rel='stylesheet' href='../src/config/style/bootstrap.min.css'>
 </head>
 <body>
-    <form method="post">
-        <input type="text" name="login" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" value="connect" name="btn_login">
+    <form class="containerconnexion" method="post">
+        <div class="form-group formconnexion">
+            <div class="containerinput">
+                <h2>Connectez-vous</h2>
+                <input class="form-control test" type="text" name="login" placeholder="Username">
+                <input class="form-control test" type="password" name="password" placeholder="Password">
+                <input class="form-control test connect_btn" type="submit" value="connect" name="btn_login">
+                    <?php
+                    if($error){
+                        echo "<div class='errormessage'>Login ou mot de passe incorrect</div>";
+                    }
+                    ?>
+            </div>
+        </div>
     </form>
-    <?php
-    if($error){
-        echo 'Login ou mot de passe incorrect';
-    }
-    ?>
 </body>
 </html>
