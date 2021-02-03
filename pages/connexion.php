@@ -1,5 +1,4 @@
-
-<?php 
+<?php
 include_once('../src/config/config.php');
 include_once('../src/component/header.php');
 
@@ -7,7 +6,7 @@ include_once('../src/component/header.php');
 
 <?php
 
-$error = false; 
+$error = false;
 
 if(isset($_POST['btn_login'])){
     $user = new User();
@@ -15,7 +14,7 @@ if(isset($_POST['btn_login'])){
 
     if(!$error){
         $_SESSION['user'] = $user;
-        header('Location: ../index.php');      
+        header('Location: ../index.php');
     }
     else{
         $user = null;
@@ -38,20 +37,20 @@ if(isset($_POST['btn_login'])){
     <link rel='stylesheet' href='../src/config/style/bootstrap.min.css'>
 </head>
 <body>
-    <form class="containerconnexion" method="post">
-        <div class="form-group formconnexion">
-            <div class="containerinput">
-                <h2>Connectez-vous</h2>
-                <input class="form-control test" type="text" name="login" placeholder="Username">
-                <input class="form-control test" type="password" name="password" placeholder="Password">
-                <input class="form-control test connect_btn" type="submit" value="connect" name="btn_login">
-                    <?php
-                    if($error){
-                        echo "<div class='errormessage'>Login ou mot de passe incorrect</div>";
-                    }
-                    ?>
-            </div>
+<form class="containerconnexion" method="post">
+    <div class="form-group formconnexion">
+        <div class="containerinput">
+            <h2>Connectez-vous</h2>
+            <input class="form-control test" type="text" name="login" placeholder="Username">
+            <input class="form-control test" type="password" name="password" placeholder="Password">
+            <input class="form-control test connect_btn" type="submit" value="connect" name="btn_login">
+            <?php
+            if($error){
+                echo "<div class='errormessage'>Login ou mot de passe incorrect</div>";
+            }
+            ?>
         </div>
-    </form>
+    </div>
+</form>
 </body>
 </html>

@@ -10,14 +10,6 @@ require_once("../src/config/class/scoreclass.php");
 $game=$_SESSION['game'];
 $user=$_SESSION['user'];
 
-echo "<div class='cartecontainer'>";
-for($i=0;$i<=$game->getnbpaire()*2 && isset($_SESSION['partie'][$i]) ;$i++){
-echo "<form method='post'>
-      <button class=' carte carte".$_SESSION['partie'][$i]."'type='submit' name='carte[$i]' value=".$_SESSION['partie'][$i].">".$_SESSION['partie'][$i]."</button>
-      </form>";
-}
-echo "</div>";
-echo "Score:".$game->getscore();
 if(isset($_POST['carte'])){
 $game->essai($_POST['carte']);
 
