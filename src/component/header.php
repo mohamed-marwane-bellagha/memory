@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <link rel='stylesheet' href='src/config/style/header.css'>
+    <link rel='stylesheet' href='src/config/style/style.css'>
     <link rel='stylesheet' href='src/config/style/bootstrap.css'>
     <link rel='stylesheet' href='src/config/style/bootstrap.min.css'>
 </head>
