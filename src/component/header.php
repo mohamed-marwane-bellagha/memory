@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <link rel='stylesheet' href='src/config/style/header.css'>
+    <link rel='stylesheet' href='src/config/style/bootstrap.css'>
+    <link rel='stylesheet' href='src/config/style/bootstrap.min.css'>
 </head>
 <body>
     <header>
@@ -25,7 +27,7 @@
                 <div class='containerheader'>
                     <h1>Memory</h1>
                     <a href='../index.php' class='paragrapheheader'>Accueil</a>
-                    <a href='profil.php' class='paragrapheheader'>Profil</a>
+                    <a href='profil.php' class='paragrapheheader'><?php echo $_SESSION['user']->login; ?></a>
                     <form method='post'>
                         <input class='btndeconnexion' type='submit' name='disconnect' value='Deconnexion'>
                     </form>

@@ -85,8 +85,7 @@ public function essai($cartevalue){
         $query->execute();
     }
 
-
-
+   
 }
 
 

@@ -8,7 +8,7 @@ include_once('../src/component/header.php');
 
 require_once("../src/config/class/scoreclass.php");
 $game=$_SESSION['game'];
-
+$user=$_SESSION['user'];
 $sign=0;
 
 echo "<div class='cartecontainer'>";
@@ -42,6 +42,6 @@ if($game->getTry1()===$game->getTry2() && $game->getIndexoftry1()!=$game->getInd
 }
 if(count($_SESSION['partie'])==0  && !isset($_POST['carte'])){
     echo "Fin du game";
-    $game->insertscore(42);
+    $game->insertscore($user->getId());
 }
 ?>
