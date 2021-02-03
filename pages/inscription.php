@@ -30,19 +30,26 @@ if(isset($_POST['btn_register'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
     <link rel='stylesheet' href='../src/config/style/style.css'>
+    <link rel='stylesheet' href='../src/config/style/bootstrap.css'>
+    <link rel='stylesheet' href='../src/config/style/bootstrap.min.css'>
 
 </head>
 <body>
-    <form method="post">
-        <input type="text" name="login" placeholder="Username">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="cpassword" placeholder="Confirm password">
-        <input type="submit" value="Register" name="btn_register">
+    <form class="containerconnexion" method="post">
+        <div class="form-group formconnexion">
+                <div class="containerinput">
+                    <h2>Inscrivez-vous</h2>
+                    <input class="form-control test" type="text" name="login" placeholder="Username">
+                    <input class="form-control test" type="password" name="password" placeholder="Password">
+                    <input class="form-control test" type="password" name="cpassword" placeholder="Confirm password">
+                    <input class="form-control test connect_btn" type="submit" value="Register" name="btn_register">
+                    <?php
+                    if($msg != ''){
+                        echo "<div class='errormessage'> $msg </div>";
+                    }
+                    ?>
+                </div>
+        </div>
     </form>
-    <?php
-    if($msg != ''){
-        echo $msg;
-    }
-    ?>
 </body>
 </html>

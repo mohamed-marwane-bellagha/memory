@@ -2,7 +2,10 @@ body{
     margin: 0;
     padding: 0;
 }
-
+body,html{
+    width: 100%;
+    height: 100%;
+}
 
 .containerheader{
     display: flex;
@@ -33,4 +36,69 @@ body{
 }
 .btndeconnexion:hover{
     background-color: red;
+}
+.test{
+    width: 25em !important;
+}
+.formconnexion{
+    height: 20em !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.connect_btn{
+    transition: 1s !important;
+}
+.connect_btn:hover{
+    background-color: red;
+}
+.containerconnexion{
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(img/civicstance.jpg);
+    background-size: cover;
+}
+.containerinput{
+    width: 28em !important;
+    height: 27em !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(180, 173, 173, 0.856);
+    border-radius: 10px;
+}
+.errormessage{
+    color: red;
+    font-size: 25px;
+    text-align: center;
+}
+.containerchangeaccount{
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(img/skyline.jpg);
+    background-size: cover;
+}
+
+.containerscore{
+    width: 28em !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(160, 13, 13, 0.863);
+    border-radius: 10px;
+    border: solid 2px white;
+    font-size: 20px;
+}
+h2{
+    text-decoration: underline;
 }

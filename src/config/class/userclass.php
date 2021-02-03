@@ -140,6 +140,9 @@
             $db = null;
             return $msg;    
         }
+        public function getId(){
+            return $this->id;   
+        }
 
     }
 
