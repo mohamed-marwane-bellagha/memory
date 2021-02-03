@@ -41,6 +41,7 @@ body{
     height: 80%;
     width: 100%;
     margin-top: 2%;
+
 }
 .cartememory{
     background: url(./img/Dos-de-cartes-final-2016-tiers.jpg);
@@ -74,7 +75,6 @@ body{
     background: url("./img/ca4picasso.jpg");
     background-size: cover;
 }
-
 .carte5:focus{
     background: url("./img/civic.jpg");
     background-size: cover;
@@ -120,6 +120,7 @@ body{
     margin-right: auto;
     margin-left: auto;
     box-sizing: content-box;
+    color:white;
 }
 .leaderboardlink{
     text-align: center;
@@ -129,5 +130,85 @@ body{
 }
 .leaderboardlink:visited{
     text-decoration: none;
+}
+.inputindex{
+    width:60% !important;
+}
+.divindex{
+    min-height: 100vh;
+    height:100%;
+    width:100%;
+    background-image: url("./img/fire_PNG6033.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formindex{
+    height:100%;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.fieldsetindex{
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width:20%;
+    height:150px;
+    border-radius: 10px;
+}
+.btnindex{
+    margin-bottom: 3%;
+}
+#memorygame{
+    background-image: url(./img/garageshop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 2%;
 
+}
+table{
+    text-align: center;
+    opacity: 0.8;
+}
+.tablecontainer{
+    width:80% !important;
+    display: flex;
+    justify-content: center;
+}
+#leaderboard{
+    background-image: url(./img/garageshop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 2%;
+    display: flex;
+    min-height: 80vh;
+    height: 100%;
+    width:100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.thleaderboard{
+    color:white;
+}
+.containerfooter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    background-color: grey;
+}
+a{
+    text-decoration: none !important;
 }

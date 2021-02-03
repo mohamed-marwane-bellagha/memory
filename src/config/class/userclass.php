@@ -140,6 +140,9 @@
             $db = null;
             return $msg;    
         }
+        public function getlogin(){
+            return $this->login;
+        }
 
     }
 

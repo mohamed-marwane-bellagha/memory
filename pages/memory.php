@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="../src/config/style/style.css">
+<link rel="stylesheet" href="../src/config/style/bootstrap.css">
+<link rel="stylesheet" href="../src/config/style/bootstrap.min.css">
+
 
 <?php
 include_once('../src/config/config.php');
@@ -25,18 +28,26 @@ $game->essai($_POST['carte']);
         }
     }
 }
-
-echo "<div class='cartecontainermemory'>";
+if(isset($_SESSION['user'])){
+echo "<main id='memorygame'><div class='cartecontainermemory'>";
 for($i=0;$i<=$game->getnbpaire()*2 && isset($_SESSION['partie'][$i]) ;$i++){
     echo "<form method='post' class='formcardmemory' action='memory.php'>
-      <button class=' cartememory carte".$_SESSION['partie'][$i]."' type='submit' name='carte[$i]' value=".$_SESSION['partie'][$i].">".$_SESSION['partie'][$i]."</button>
+     <div class='form-group'>
+     <button class=' cartememory carte".$_SESSION['partie'][$i]."' type='submit' name='carte[$i]' value=".$_SESSION['partie'][$i]."></button>
+     </div>
       </form>";
 }
 echo "</div>";
 echo "<div class='scorecontainer'>Score:".$game->getscore()."</div>";
 if(count($_SESSION['partie'])==0  && isset($_POST['carte'])){
     echo "<div class='scorecontainer'><p>Fin du game</p>";
-    echo "<a class='leaderboardlink' href='leaderboard.php'>Check si t'es dans le leaderboard</a></div>";
+    echo "<a class='leaderboardlink' href='leaderboard.php'>Check si t'es dans le leaderboard</a>
+          </div></main>";
     $game->insertscore(42);
 }
+}else{
+    header("Location:../index.php");
+}
+include_once('../src/component/footer.php');
+
 ?>
